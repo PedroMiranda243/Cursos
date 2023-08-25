@@ -100,6 +100,6 @@ if (xBolinha > 592){
   meusPontos += 1
 }
 if (xBolinha < 8){
-  pontosDoOponente += 1
+  pontosDoOponente += 2
 }
 }
