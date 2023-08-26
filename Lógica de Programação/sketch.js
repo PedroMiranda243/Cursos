@@ -1,7 +1,7 @@
 //variaveis bolinha
 let xBolinha = 300;
 let yBolinha = 200;
-let diametro = 15;
+let diametro = 13;
 let raio = diametro/2;
 
 //velocidade da bolinha
@@ -90,9 +90,17 @@ function verificaColisaoRaqueteOponente(){
 }
 
 function incluiPlacar(){
-fill(255)
-text(meusPontos, 200, 26)
-text(pontosDoOponente, 350, 26)
+stroke(255)
+textAlign(CENTER);
+textSize(16);
+fill(color(178,34,34))  
+rect(150, 10, 40, 20);
+fill(255);
+text(meusPontos, 170, 26);
+fill(color(178,34,34)) 
+rect(450, 10, 40, 20);
+fill(255);
+text(pontosDoOponente, 470, 26);
 }
 
 function marcaPonto(){
