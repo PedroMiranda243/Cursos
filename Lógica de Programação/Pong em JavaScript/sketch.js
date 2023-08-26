@@ -126,4 +126,6 @@ if (xBolinha < 8){
   pontosDoOponente += 1
   ponto.play();
 }
+
+;;;;
 }
