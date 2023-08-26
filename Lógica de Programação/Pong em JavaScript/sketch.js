@@ -94,13 +94,13 @@ function movimentaRaqueteOponente() {
 function verificaColisaoRaquete(){
   if (xBolinha - raio < xRaquete + largura && yBolinha - raio < yRaquete + altura && yBolinha + raio > yRaquete)
   velocidadeXBolinha *= -1;
-  raquetada.play();
+//raquetada.play(); nao funciona nao sei pq 
 }
 
 function verificaColisaoRaqueteOponente(){
   if (xBolinha + raio > xRaqueteOponente - largura && yBolinha - raio < yRaqueteOponente + altura && yBolinha + raio > yRaqueteOponente)
   velocidadeXBolinha *= -1;
-  raquetada.play();
+ //raquetada.play(); nao funciona n sei pq 
 }
 
 function incluiPlacar(){
