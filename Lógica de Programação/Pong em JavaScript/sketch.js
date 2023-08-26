@@ -86,8 +86,12 @@ function movimentaRaquete(){
 }
 
 function movimentaRaqueteOponente() {
-  velocidadeYOponente = yBolinha - yRaqueteOponente - largura / 2 - 30;
-  yRaqueteOponente += velocidadeYOponente;
+  if(keyIsDown(87)){
+    yRaqueteOponente -= 10;
+  }
+    if(keyIsDown(83)){
+    yRaqueteOponente += 10;
+  }
   }
   
 
@@ -126,6 +130,4 @@ if (xBolinha < 8){
   pontosDoOponente += 1
   ponto.play();
 }
-
-;;;;
 }
