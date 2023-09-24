@@ -10,7 +10,7 @@ public class App {
         int opcao = 0;
 
         System.out.println("*******************");
-          System.out.println("\nNome do clente: " + cliente); 
+          System.out.println("\nNome do cliente: " + cliente); 
           System.out.println("Tipo da conta: " + tipoConta);
           System.out.println("Saldo atual: R$" + saldo);
           System.out.println("\n*******************");
