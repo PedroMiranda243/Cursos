@@ -7,14 +7,15 @@ public class App {
         String tipoConta = "Corrente";
         double saldo = 600;
         double transferir; 
-        int opcao = 0;
+        String opcao;
+        int menu = 0;
 
         System.out.println("*******************");
           System.out.println("\nNome do cliente: " + cliente); 
           System.out.println("Tipo da conta: " + tipoConta);
           System.out.println("Saldo atual: R$" + saldo);
           System.out.println("\n*******************");
-        String menu = """
+        String menuTexto = """
                 Digite sua opção
                 1 - Consultar saldo
                 2 - Transferir valor
@@ -22,41 +23,42 @@ public class App {
                 4 - sair
                 """;
                 Scanner ler = new Scanner(System.in);
-    while(opcao == 0){
-        System.out.println(menu);
-        opcao = ler.nextInt();
+    while(menu == 0){
+        System.out.println(menuTexto);
+        opcao = ler.next();
        try {
-       if(opcao == 1){
+       if(opcao.equals("1")){
             System.out.println("Seu saldo atual é de: R$" + saldo);
-            opcao = 0;
+            menu = 0;
         }
-        if(opcao == 2){
+        if(opcao.equals("2")){
             System.out.println("Digite quanto deseja transferir: ");
             transferir = ler.nextDouble();
             if(saldo < transferir){
                 System.out.println("Saldo insuficiente para efetuar a transferência!");
-                opcao = 0;
+                menu = 0;
             }
             else{
             saldo -= transferir;
             System.out.println("Você fez uma transferência no valor de: R$" + transferir);
-            opcao = 0;
+            menu = 0;
         }
         }
-        if(opcao == 3){
+        if(opcao.equals("3")){
             System.out.println("Digite quanto deseja depositar: ");
             transferir = ler.nextDouble();
             saldo += transferir;
             System.out.println("Você depositou R$" + transferir + " na sua conta.");
-            opcao = 0;
+            menu = 0;
         }
-        if(opcao == 4){
+        if(opcao.equals("4")){
             System.out.println("Saindo do programa...");
+            menu = 1;
         }
 
        } catch (Exception e) {
         System.out.println("Opção inválida!");
-            opcao = 0;
+            menu = 0;
        }
     }
     }
