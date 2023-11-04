@@ -1,4 +1,6 @@
 import screenmatch.calculos.CalculadoraTempo;
+import screenmatch.calculos.FiltroRecomendacao;
+import screenmatch.modelos.Episodio;
 import screenmatch.modelos.Filme;
 import screenmatch.modelos.Serie;
 
@@ -45,5 +47,19 @@ public class App {
         calc.inclui(setimo);
         calc.inclui(bb);
         System.out.println("O tempo total dos Títulos selecionados é: "+ calc.getTempoTotal());
-    }
+
+        //Seção do filtro
+        FiltroRecomendacao f = new FiltroRecomendacao();
+        f.filtra(setimo);
+
+
+        //Seção episódio 
+
+        Episodio ep = new Episodio();
+        ep.setNumero(1);
+        ep.setSerie(bb);
+        ep.setTotalVizualizacoes(300);
+        f.filtra(ep);
+
+      }
 }
