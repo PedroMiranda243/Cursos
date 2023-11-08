@@ -8,8 +8,6 @@ public class Titulo {
     private int totalAvaliacoes;
     private double somaAvaliacoes;
 
-
-
     public String getNome() {
         return nome;
     }
@@ -58,18 +56,18 @@ public class Titulo {
         this.somaAvaliacoes = somaAvaliacoes;
     }
 
-    public void exibeFicha(){
+    public void exibeFicha() {
         System.out.println("Nome do filme: " + nome + "\n" + "Ano de Lançamento: " + anoDeLancamento);
-        System.out.println("Duração em minutos: " + duracaoEmMinutos + "\n" + "Incluído no plano: " +incluidoNoPlano);
+        System.out.println("Duração em minutos: " + duracaoEmMinutos + "\n" + "Incluído no plano: " + incluidoNoPlano);
 
     }
 
-    public void avalia(double nota){
+    public void avalia(double nota) {
         somaAvaliacoes += nota;
         totalAvaliacoes++;
     }
 
-    public double pegaMedia(){
-        return somaAvaliacoes / totalAvaliacoes; 
+    public double pegaMedia() {
+        return somaAvaliacoes / totalAvaliacoes;
     }
 }
