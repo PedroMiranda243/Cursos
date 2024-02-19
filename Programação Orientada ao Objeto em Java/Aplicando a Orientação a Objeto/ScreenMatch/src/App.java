@@ -1,8 +1,11 @@
+import java.util.ArrayList;
+
 import screenmatch.calculos.CalculadoraTempo;
 import screenmatch.calculos.FiltroRecomendacao;
 import screenmatch.modelos.Episodio;
 import screenmatch.modelos.Filme;
 import screenmatch.modelos.Serie;
+import screenmatch.modelos.Titulo;
 
 public class App {
   public static void main(String[] args) throws Exception {
@@ -59,5 +62,11 @@ public class App {
     ep.setTotalVizualizacoes(300);
     f.filtra(ep);
 
+    ArrayList<Titulo> listadeTitulos = new ArrayList<>();
+    listadeTitulos.add(setimo);
+    listadeTitulos.add(bb);
+    System.out.println("Tamanho da Lista: "+ listadeTitulos.size());
+    System.out.println("Primeiro Titulo: "+ listadeTitulos.get(0).getNome());
+    System.out.println(listadeTitulos);
   }
 }
